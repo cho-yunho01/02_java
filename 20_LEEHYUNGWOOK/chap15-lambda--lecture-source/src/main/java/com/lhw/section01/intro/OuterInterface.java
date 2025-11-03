@@ -1,6 +1,6 @@
 package com.lhw.section01.intro;
 
-public interface OuterCalculator {
+public interface OuterInterface {
 
     @FunctionalInterface
     public interface Sum{
