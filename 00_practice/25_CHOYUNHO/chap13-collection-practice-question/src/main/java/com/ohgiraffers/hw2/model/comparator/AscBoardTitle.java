@@ -7,13 +7,6 @@ import java.util.Comparator;
 public class AscBoardTitle implements Comparator<BoardDTO> {
     @Override
     public int compare(BoardDTO o1, BoardDTO o2) {
-        if(o1.getBoardTitle()<o2.getBoardTitle()){
-            return 1;
-        }
-        else if(o1.getBoardTitle()>o2.getBoardTitle()){
-            return -1;
-        }
-        else
-            return 0;
+        return o1.getBoardTitle().compareTo(o2.getBoardTitle());
     }
 }
