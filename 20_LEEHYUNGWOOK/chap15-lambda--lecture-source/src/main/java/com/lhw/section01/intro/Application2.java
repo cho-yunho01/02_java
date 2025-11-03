@@ -1,0 +1,4 @@
+package com.lhw.section01.intro;
+
+public class Application2 {
+}
