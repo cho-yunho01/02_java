@@ -15,7 +15,8 @@ private boolean coupon;
     @Override
     public String toString() {
         return "CookBook{" +
-                "coupon=" + coupon +
+                super.toString() +
+                "coupon= " + coupon +
                 '}';
     }
 

@@ -5,10 +5,12 @@ public class Application1 {
     public static void main(String[] args) {
 
         /* 1. 배열의 주소를 보관할 레퍼런스 변수 선언 (stack) */
-        int[][] iarr1;
-        int iarr2[][];
-        int[] iarr3[];
 
+//        int[][] iarr1;
+//        int iarr2[][];
+//        int[] iarr3[];
+        int[][] iarr1;
+        int[
         /* 2. 여러 개의 1차원 배열의 주소를 관리하는 배열 생성(heap) */
 //        iarr1 = new int[][]; -> 크기를 지정하지 않으면 생성불가
 //        iarr1 = new int[][4]; 주소를 묶어서 관리할 배열의 크기를 지정하지 않으면 생성 불가
