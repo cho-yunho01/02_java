@@ -6,9 +6,11 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 public class MemberManager {
+    private int count = 0;
     private Member[] members;
 
     public void readMembers() {
+        count = 0;
         ObjectInputStream ois = null;
 
         boolean exists = new File("src/main/java/com/ohgiraffers/io/member/members.ser").exists();
@@ -16,9 +18,11 @@ public class MemberManager {
             try {
                 ois = new ObjectInputStream(
                         new java.io.FileInputStream("src/main/java/com/ohgiraffers/io/member/members.ser"));
-                members = (Member[]) ois.readObject();
-                for (Member member : members) {
-                    System.out.println(member);
+
+                while (true) {
+                    Member member = (Member) ois.readObject();
+                    System.out.println(member.toString());
+                    count++;
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -35,17 +39,16 @@ public class MemberManager {
     }
 
     public void addMember(Member m) {
-        int oldLen = (members == null) ? 0 : members.length;
-        Member[] newMembers = new Member[oldLen + 1];
+        Member[] newMembers = new Member[count + 1];
 
-        for (int i = 0; i < oldLen; i++) {
+        for (int i = 0; i < count; i++) {
             newMembers[i] = members[i];
         }
-        newMembers[oldLen] = m;
+        newMembers[count] = m;
         members = newMembers;
         ObjectOutputStream oos = null;
         try {
-            oos = new ObjectOutputStream(new FileOutputStream("src/main/java/com/ohgiraffers/io/member/members.ser"));
+            oos = new ObjectOutputStream(new FileOutputStream("src/main/java/com/ohgiraffers/io/member/members.ser", true));
             oos.writeObject(members);
             oos.flush();
         } catch (Exception e) {
