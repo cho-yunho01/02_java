@@ -14,15 +14,11 @@ public class Application1 {
         Scanner sc = new Scanner(System.in);
         System.out.print("문자열을 하나 입력하세요 : ");
         String str = sc.nextLine();
-
         char[] carr = new char[str.length()];
         //System.out.println(carr[0]);
-
         System.out.print("검색할 문자를 입력하세요 : ");
         char ch = sc.next().charAt(0);
-
         char[] carr2 = str.toCharArray();
-
         for(int i = 0; i < carr2.length; i++) {
 
             System.out.println(carr2[i]);
