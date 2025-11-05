@@ -1,4 +1,4 @@
-package com.lhiw.section01.lifecycle;
+package com.lhw.section01.lifecycle;
 
 import org.junit.jupiter.api.*;
 
