@@ -18,8 +18,8 @@ public class Application {
         System.out.println("t2 우선순위: " + t2.getPriority());
         System.out.println("t3 우선 순위: " + t3.getPriority());
 
-        t1.setPriority(Thread.MAX_PRIORITY);
-        t2.setPriority(Thread.MIN_PRIORITY);
+        t2.setPriority(Thread.MAX_PRIORITY);
+        t3.setPriority(Thread.MIN_PRIORITY);
 
         System.out.println("t1 우선 순위: " + t1.getPriority());
         System.out.println("t2 우선순위: " + t2.getPriority());
